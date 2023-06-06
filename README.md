@@ -66,3 +66,20 @@ Example line for /etc/hosts:
 `
 10.0.0.4 nimbus
 `
+
+### Accessing Storm UI on CORE EMU from Host device
+To access any server on CORE from the host machine, there are many ways as eth bridging, EMANE, etc. Yet we used the control network infrastructor of CORE EMU. It provides a parallel network among all virtual devices and the host device.
+
+### Graphite Setup
+Data providers of the graphite is on virtual nodes in our setup. For that reason, we made all the graphite setup over control network.
+
+Example container arguments for this:
+```bash
+sudo docker run -d  --name graphite  --restart=always 
+-p 172.16.0.254:80:80  
+-p 172.16.0.254:2003-2004:2003-2004  
+-p 172.16.0.254:2023-2024:2023-2024  
+-p 172.16.0.254:8125:8125/udp  
+-p 172.16.0.254:8126:8126  
+graphiteapp/graphite-statsd
+```
