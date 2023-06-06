@@ -1,10 +1,8 @@
 # Distributed Stream Processing on Edge-Cloud
 
 We used [our fork of Apache Storm](https://github.com/Sefik-Palazoglu/storm) distributed stream processing engine to allow us to enforce placements of bolts to physical hardware.
-
 [Core Network Emulator](http://coreemu.github.io/core/) was used to easily create cloud-edge computing with easily 
 configurable scenarios.
-
 We employed [Riot Bench](https://github.com/dream-lab/riot-bench) for running actual benchmarked topologies in our experiments.
 [ETL Taxi](https://github.com/dream-lab/riot-bench/blob/master/modules/storm/src/main/java/in/dream_lab/bm/stream_iot/storm/topo/apps/ETLTopology.java) Topology was used particularly.
 
@@ -35,11 +33,11 @@ We run our experiments with 5, 40, and 80ms and with edge-cloud placement and on
 ## Results
 Green graph is edge-Cloud, Blue graph is cloud-only
 
-5ms_Cloud-only vs. Edge-Cloud: 
+5ms_Cloud-only vs. Edge-Cloud:  
 ![5ms_Cloud-only vs. Edge-Cloud](https://github.com/DSPoEC/Cmpe492/blob/main/Graphs/5ms-comparison.png)
 
-40ms_Cloud-only vs. Edge-Cloud:
+40ms_Cloud-only vs. Edge-Cloud:  
 ![40ms_Cloud-only vs. Edge-Cloud](https://github.com/DSPoEC/Cmpe492/blob/main/Graphs/40ms-comparison.png)
 
-80ms_Cloud-only vs. Edge-Cloud: 
+80ms_Cloud-only vs. Edge-Cloud:  
 ![80ms_Cloud-only vs. Edge-Cloud](https://github.com/DSPoEC/Cmpe492/blob/main/Graphs/80ms-comparison.png)
