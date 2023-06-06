@@ -55,6 +55,14 @@ We actually run these daemons in the same machine, so we need to seperate their 
 Run an edge supervisor like this: `storm supervisor --config /path/to/edgeSupervisor.yaml`
 
 ### Cpu limiting
-We used linux's own cpu limiting tool to limin edge and cloud nodes's cpu power.
+We used linux's own cpu limiting tool to limit edge and cloud nodes's cpu power.
 Limit edge node's cpu core limit to 1 and cpulimit to 8%: `cpulimit --pid=34 --cpu=1 --limit=8`
 This is assuming edgeSupervisor node is at pid=34.
+
+### Nameservers
+We did not place a DNS server in our setup. For that reason using IP's does not work directly for configuring nimbus and zookeeper in storm.yaml. The exact name of the host must be declared in /etc/hosts, what we used instead of a DNS server. 
+
+Example line for /etc/hosts:
+`
+10.0.0.4 nimbus
+`
