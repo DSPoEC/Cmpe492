@@ -47,4 +47,4 @@ You first need to get our fork of Apache Storm. Compiling from source code is de
 `mvn package -DskipTests=true -Dgpg.skip=true`
 
 Then you need to set up a core session with the provided session files in xmls folder.
-After this, It is as straightforward as running your Storm daemons. Then you submit your topology as described in the Resources/
+After this, It is as straightforward as running your Storm daemons. Then you submit your topology as described in the `Resources/How to Build and Submit Topologies In Apache Storm.pdf` document.
