@@ -48,3 +48,13 @@ You first need to get our fork of Apache Storm. Compiling from source code is de
 
 Then you need to set up a core session with the provided session files in xmls folder.
 After this, It is as straightforward as running your Storm daemons. Then you submit your topology as described in the `Resources/How to Build and Submit Topologies In Apache Storm.pdf` document.
+
+## Caveats
+### File system conflicts
+We actually run these daemons in the same machine, so we need to seperate their dedicated files where they write log files and state etc. This is done by two different .yaml files provided in src/ folder.
+Run an edge supervisor like this: `storm supervisor --config /path/to/edgeSupervisor.yaml`
+
+### Cpu limiting
+We used linux's own cpu limiting tool to limin edge and cloud nodes's cpu power.
+Limit edge node's cpu core limit to 1 and cpulimit to 8%: `cpulimit --pid=34 --cpu=1 --limit=8`
+This is assuming edgeSupervisor node is at pid=34.
