@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<scenario name="/tmp/tmplmshry3o">
+  <networks>
+    <network id="1" name="SwitchNode1" icon="" canvas="0" type="SWITCH">
+      <position x="500.0" y="200.0" lat="47.57735226369077" lon="-122.12557922472458" alt="2.0"/>
+    </network>
+    <network id="2" name="SwitchNode2" icon="" canvas="0" type="SWITCH">
+      <position x="500.0" y="500.0" lat="47.57462520029507" lon="-122.12557922472458" alt="2.0"/>
+    </network>
+  </networks>
+  <devices>
+    <device id="3" name="edge" icon="" canvas="0" type="PC" class="" image="">
+      <position x="100.0" y="100.0" lat="47.57826125326112" lon="-122.13096911642927" alt="2.0"/>
+      <configservices>
+        <service name="DefaultRoute"/>
+      </configservices>
+    </device>
+    <device id="4" name="nimbus" icon="" canvas="0" type="PC" class="" image="">
+      <position x="900.0" y="100.0" lat="47.57826125326112" lon="-122.12018933301985" alt="2.0"/>
+      <configservices>
+        <service name="DefaultRoute"/>
+      </configservices>
+    </device>
+    <device id="5" name="zookeeper" icon="" canvas="0" type="PC" class="" image="">
+      <position x="900.0" y="200.0" lat="47.57735226369077" lon="-122.12018933301985" alt="2.0"/>
+      <configservices>
+        <service name="DefaultRoute"/>
+      </configservices>
+    </device>
+    <device id="6" name="storm-ui" icon="" canvas="0" type="PC" class="" image="">
+      <position x="900.0" y="300.0" lat="47.57644325833968" lon="-122.12018933301985" alt="2.0"/>
+      <configservices>
+        <service name="DefaultRoute"/>
+      </configservices>
+    </device>
+    <device id="7" name="cloud" icon="" canvas="0" type="PC" class="" image="">
+      <position x="900.0" y="400.0" lat="47.5755342372078" lon="-122.12018933301985" alt="2.0"/>
+      <configservices>
+        <service name="DefaultRoute"/>
+      </configservices>
+    </device>
+  </devices>
+  <links>
+    <link node1="1" node2="2">
+      <iface1 id="6" name="veth1.6.2"/>
+      <iface2 id="0" name="veth2.0.2"/>
+      <options delay="80000" bandwidth="200000" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="2" node2="5">
+      <iface1 id="2" name="veth2.2.2"/>
+      <iface2 id="0" name="eth0" mac="00:16:3e:81:39:42" ip4="10.0.0.5" ip4_mask="24" ip6="2001::5" ip6_mask="64"/>
+      <options delay="1000" bandwidth="100000000" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="2" node2="7">
+      <iface1 id="4" name="veth2.4.2"/>
+      <iface2 id="0" name="eth0" mac="00:16:3e:9f:b5:8c" ip4="10.0.0.7" ip4_mask="24" ip6="2001::7" ip6_mask="64"/>
+      <options delay="1000" bandwidth="100000000" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="2" node2="6">
+      <iface1 id="3" name="veth2.3.2"/>
+      <iface2 id="0" name="eth0" mac="00:16:3e:66:0d:ad" ip4="10.0.0.6" ip4_mask="24" ip6="2001::6" ip6_mask="64"/>
+      <options delay="1000" bandwidth="100000000" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="2" node2="4">
+      <iface1 id="1" name="veth2.1.2"/>
+      <iface2 id="0" name="eth0" mac="00:16:3e:bd:6a:7a" ip4="10.0.0.4" ip4_mask="24" ip6="2001::4" ip6_mask="64"/>
+      <options delay="1000" bandwidth="100000000" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+    <link node1="1" node2="3">
+      <iface1 id="0" name="veth1.0.2"/>
+      <iface2 id="0" name="eth0" mac="00:16:3e:fe:82:a9" ip4="10.0.0.3" ip4_mask="24" ip6="2001::3" ip6_mask="64"/>
+      <options delay="1000" bandwidth="100000000" loss="0.0" dup="0" jitter="0" unidirectional="0" buffer="0"/>
+    </link>
+  </links>
+  <configservice_configurations>
+    <service name="DefaultRoute" node="3"/>
+    <service name="DefaultRoute" node="4"/>
+    <service name="DefaultRoute" node="5"/>
+    <service name="DefaultRoute" node="6"/>
+    <service name="DefaultRoute" node="7"/>
+  </configservice_configurations>
+  <session_origin lat="47.57917022705078" lon="-122.13231658935547" alt="2.0" scale="150.0"/>
+  <session_options>
+    <configuration name="controlnet" value="172.16.0.0/24"/>
+    <configuration name="controlnet0" value=""/>
+    <configuration name="controlnet1" value=""/>
+    <configuration name="controlnet2" value=""/>
+    <configuration name="controlnet3" value=""/>
+    <configuration name="controlnet_updown_script" value=""/>
+    <configuration name="enablerj45" value="1"/>
+    <configuration name="preservedir" value="0"/>
+    <configuration name="enablesdt" value="0"/>
+    <configuration name="sdturl" value="tcp://127.0.0.1:50000/"/>
+    <configuration name="ovs" value="0"/>
+    <configuration name="platform_id_start" value="1"/>
+    <configuration name="nem_id_start" value="1"/>
+    <configuration name="link_enabled" value="1"/>
+    <configuration name="loss_threshold" value="30"/>
+    <configuration name="link_interval" value="1"/>
+    <configuration name="link_timeout" value="4"/>
+    <configuration name="mtu" value="0"/>
+  </session_options>
+  <session_metadata>
+    <configuration name="shapes" value="[]"/>
+    <configuration name="edges" value="[]"/>
+    <configuration name="hidden" value="[]"/>
+    <configuration name="canvas" value="{&quot;gridlines&quot;: true, &quot;canvases&quot;: [{&quot;id&quot;: 1, &quot;wallpaper&quot;: null, &quot;wallpaper_style&quot;: 1, &quot;fit_image&quot;: false, &quot;dimensions&quot;: [1000, 750]}]}"/>
+  </session_metadata>
+  <default_services>
+    <node type="mdr">
+      <service name="zebra"/>
+      <service name="OSPFv3MDR"/>
+      <service name="IPForward"/>
+    </node>
+    <node type="PC">
+      <service name="DefaultRoute"/>
+    </node>
+    <node type="prouter"/>
+    <node type="router">
+      <service name="zebra"/>
+      <service name="OSPFv2"/>
+      <service name="OSPFv3"/>
+      <service name="IPForward"/>
+    </node>
+    <node type="host">
+      <service name="DefaultRoute"/>
+      <service name="SSH"/>
+    </node>
+  </default_services>
+</scenario>
