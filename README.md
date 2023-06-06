@@ -34,13 +34,13 @@ We run our experiments with 5, 40, and 80ms and with edge-cloud placement and on
 Green graph is edge-Cloud, Blue graph is cloud-only
 
 5ms_Cloud-only vs. Edge-Cloud:  
-![5ms_Cloud-only vs. Edge-Cloud](https://github.com/DSPoEC/Cmpe492/blob/main/Graphs/5ms-comparison.png)
+![5ms_Cloud-only vs. Edge-Cloud](https://github.com/DSPoEC/Cmpe492/blob/main/Graphs/5ms-comparison-styled.png)
 
 40ms_Cloud-only vs. Edge-Cloud:  
-![40ms_Cloud-only vs. Edge-Cloud](https://github.com/DSPoEC/Cmpe492/blob/main/Graphs/40ms-comparison.png)
+![40ms_Cloud-only vs. Edge-Cloud](https://github.com/DSPoEC/Cmpe492/blob/main/Graphs/40ms-comparison-styled.png)
 
 80ms_Cloud-only vs. Edge-Cloud:  
-![80ms_Cloud-only vs. Edge-Cloud](https://github.com/DSPoEC/Cmpe492/blob/main/Graphs/80ms-comparison.png)
+![80ms_Cloud-only vs. Edge-Cloud](https://github.com/DSPoEC/Cmpe492/blob/main/Graphs/80ms-comparison-styled.png)
 
 # How to run your own Experiments
 You first need to get our fork of Apache Storm. Compiling from source code is described in [DEVELOPER.md](https://github.com/apache/storm/blob/master/DEVELOPER.md) of Apache Storm. When building, just keep in mind how you run the distribution maven command. You may need to run it like this:  
