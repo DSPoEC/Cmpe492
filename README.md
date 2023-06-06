@@ -41,3 +41,10 @@ Green graph is edge-Cloud, Blue graph is cloud-only
 
 80ms_Cloud-only vs. Edge-Cloud:  
 ![80ms_Cloud-only vs. Edge-Cloud](https://github.com/DSPoEC/Cmpe492/blob/main/Graphs/80ms-comparison.png)
+
+# How to run your own Experiments
+You first need to get our fork of Apache Storm. Compiling from source code is described in [DEVELOPER.md](https://github.com/apache/storm/blob/master/DEVELOPER.md) of Apache Storm. When building, just keep in mind how you run the distribution maven command. You may need to run it like this:  
+`mvn package -DskipTests=true -Dgpg.skip=true`
+
+Then you need to set up a core session with the provided session files in xmls folder.
+After this, It is as straightforward as running your Storm daemons. Then you submit your topology as described in the Resources/
