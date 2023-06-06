@@ -25,3 +25,5 @@ This achieved by our fork of [Apache Storm](https://github.com/Sefik-Palazoglu/s
 Here is how experiment setups look like in Core:
 
 40ms: ![alt text](https://github.com/DSPoEC/Cmpe492/blob/main/xmls/40ms.png)
+
+We have bandwidth, latency, and even loss/duplication configurations in Core Network Emulator. This is why we chose this emulator to be our testbed in our DSP applications which are run on edge-cloud hardware.
